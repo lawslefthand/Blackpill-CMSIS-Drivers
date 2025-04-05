@@ -1,6 +1,6 @@
-# CMSIS based Flow Sensor Driver for STM32 Blackpill boards (F401CCU/F401CEU)
+## Flow Sensor Driver for STM32 Blackpill boards (F401CCU/F401CEU)
 
-This repository contains an STM32-based driver for the YF-S201 flow sensor using the TIM1 peripheral for pulse counting. The driver calculates flow rate, turbine RPM, and total volume.
+This sections contains an STM32-based driver for the YF-S201 flow sensor using the TIM1 peripheral for pulse counting. The driver calculates flow rate, turbine RPM, and total volume.
 
 ## Features
 - Measures **flow rate (L/min)** based on sensor pulses
@@ -82,7 +82,6 @@ For correct sensor configuration, use the following in your flow.c:
 #define Pulse_per_litre 7.5      // Set according to your sensor model
 #define Blade_numb number 8       // Number of blades in the turbine
 ```
-
 
 ## Usage
 Example code in `main.c`.
