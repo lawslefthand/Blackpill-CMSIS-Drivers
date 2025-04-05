@@ -23,15 +23,16 @@ usart/
 ## Configuration Macros (in `usart.h`)
 
 ```c
-#define MCU_CLK             16000000U
-#define DESIRED_BAUD_RATE   115200U
-#define USART_GPIO_EN       RCC_AHB1ENR_GPIOAEN
-#define USART_EN_CLK        RCC_APB1ENR_USART2EN
-#define USART_GPIO_NAME     GPIOA
-#define USART_NAME          USART2
-#define USART_TX_STATUS     USART_SR_TXE
-#define USART_TE_EN         USART_CR1_TE
-#define USART_EN            USART_CR1_UE
+#define USART_PIN            (1U<<2)   // PA2 TX pin
+#define USART_GPIO_EN        (1U<<0)   //  GPIOA clock
+#define USART_EN_CLK         (1U<<17)  // USART2 clock
+#define USART_GPIO_NAME       GPIOA
+#define USART_EN             (1U<<13)  // USART enable
+#define USART_TE_EN          (1U<<3)   // Transmitter enable
+#define USART_NAME           USART2
+#define DESIRED_BAUD_RATE    115200
+#define MCU_CLK              84000000
+#define USART_TX_STATUS      (1U<<7)   // TXE flag in SR
 ```
 
 ## Usage
