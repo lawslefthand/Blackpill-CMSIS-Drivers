@@ -19,7 +19,6 @@
 #define BMP280_I2C_ADDR 0x76
 
 void delay_1s(void) {
-    // F401 runs much faster than F030, need to adjust the delay
     for (uint32_t i = 0; i < 1000000; i++) {
         __NOP();
     }
@@ -61,132 +60,88 @@ void bmp_gpio_config(void) {
 }
 
 void bmp_i2c_config(void) {
-    // Disable I2C1
     I2C1->CR1 &= ~I2C_CR1_PE;
 
-    // Wait for peripheral to be disabled
     while(I2C1->CR1 & I2C_CR1_PE);
 
-    // Configure I2C parameters for STM32F401 (different from F030)
 
-    // Set I2C clock frequency to 100kHz
-    // Assuming PCLK1 = 42MHz (typical for F401 at 84MHz system clock)
     I2C1->CR2 = (42 & 0x3F); // Set FREQ value (42MHz)
 
-    // Configure CCR for 100kHz
-    // Tscl = CCR * Tpclk1 * 2
-    // For 100kHz: 10µs = CCR * (1/42MHz) * 2
-    // CCR = 10µs / (2 * (1/42MHz)) = 210
+    
     I2C1->CCR = 210;
 
-    // Configure TRISE (max rise time)
-    // For 100kHz, max rise time is 1000ns
-    // TRISE = (1000ns / (1/42MHz)) + 1 = 43
     I2C1->TRISE = 43;
 
-    // Enable I2C1
     I2C1->CR1 |= I2C_CR1_PE;
 }
 
 void bmp_i2c_write(uint8_t addr, uint8_t value) {
-    // Wait until I2C is not busy
     while(I2C1->SR2 & I2C_SR2_BUSY);
 
-    // Generate START condition
     I2C1->CR1 |= I2C_CR1_START;
 
-    // Wait for START to be generated
     while(!(I2C1->SR1 & I2C_SR1_SB));
 
-    // Send slave address (with write bit = 0)
     I2C1->DR = BMP280_I2C_ADDR << 1;
 
-    // Wait for address to be sent
     while(!(I2C1->SR1 & I2C_SR1_ADDR));
 
-    // Clear ADDR flag by reading SR2
     (void)I2C1->SR2;
 
-    // Wait for TXE flag
     while(!(I2C1->SR1 & I2C_SR1_TXE));
 
-    // Send register address
     I2C1->DR = addr;
 
-    // Wait for TXE flag
     while(!(I2C1->SR1 & I2C_SR1_TXE));
 
-    // Send data
     I2C1->DR = value;
 
-    // Wait for BTF flag (Byte Transfer Finished)
     while(!(I2C1->SR1 & I2C_SR1_BTF));
 
-    // Generate STOP condition
     I2C1->CR1 |= I2C_CR1_STOP;
 }
 
 uint8_t bmp_i2c_read(uint8_t reg_addr) {
     uint8_t value;
 
-    // Wait until I2C is not busy
     while(I2C1->SR2 & I2C_SR2_BUSY);
 
-    // Generate START condition
     I2C1->CR1 |= I2C_CR1_START;
 
-    // Wait for START to be generated
     while(!(I2C1->SR1 & I2C_SR1_SB));
 
-    // Send slave address (with write bit = 0)
     I2C1->DR = BMP280_I2C_ADDR << 1;
 
-    // Wait for address to be sent
     while(!(I2C1->SR1 & I2C_SR1_ADDR));
 
-    // Clear ADDR flag by reading SR2
     (void)I2C1->SR2;
 
-    // Wait for TXE flag
     while(!(I2C1->SR1 & I2C_SR1_TXE));
 
-    // Send register address
     I2C1->DR = reg_addr;
 
-    // Wait for BTF flag
     while(!(I2C1->SR1 & I2C_SR1_BTF));
 
-    // Generate repeated START condition
     I2C1->CR1 |= I2C_CR1_START;
 
-    // Wait for START to be generated
     while(!(I2C1->SR1 & I2C_SR1_SB));
 
-    // Send slave address (with read bit = 1)
     I2C1->DR = (BMP280_I2C_ADDR << 1) | 0x01;
 
-    // Wait for address to be sent
     while(!(I2C1->SR1 & I2C_SR1_ADDR));
 
-    // Clear ADDR flag by reading SR2
     (void)I2C1->SR2;
 
-    // Disable ACK
     I2C1->CR1 &= ~I2C_CR1_ACK;
 
-    // Generate STOP condition (to be sent after data received)
     I2C1->CR1 |= I2C_CR1_STOP;
 
-    // Wait for RxNE flag
     while(!(I2C1->SR1 & I2C_SR1_RXNE));
 
-    // Read data
     value = I2C1->DR;
 
-    // Ensure stop is sent
     while(I2C1->CR1 & I2C_CR1_STOP);
 
-    // Re-enable ACK
     I2C1->CR1 |= I2C_CR1_ACK;
 
     return value;
@@ -252,10 +207,8 @@ double pressure(void) {
     signed long raw_pressure = 0;
     double p = 0;
 
-    // Get t_fine from temperature calculation
     t_fine = temperature(1);
 
-    // Read calibration coefficients
     dig_P1 = bmp_i2c_read(0x8E);
     dig_P1 |= (bmp_i2c_read(0x8F) << 8);
 
