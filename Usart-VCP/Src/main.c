@@ -17,6 +17,6 @@ int main()
     while(1)
     {
         printf("your message here\n");
-        for (volatile int i = 0; i < 1000000; i++);
+        HAL_MAX_DELAY(500);
     }
 }
