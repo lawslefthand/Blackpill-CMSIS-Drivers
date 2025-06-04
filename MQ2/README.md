@@ -64,7 +64,24 @@ The UART output (115200 baud rate) looks like:
 3. Compile and flash the code to your STM32 board.
 4. Open a serial terminal (e.g., PuTTY, TeraTerm) to view output.
 
----
+
+
+## 🔍 MQ2 Sensor Working Principle
+
+The MQ2 sensor detects gas concentrations based on a change in resistance of a heated sensitive material(TIN DIOXIDE). The sensor outputs an analog voltage proportional to gas concentration.
+
+- **Rs**: Sensor resistance in gas
+- **Ro**: Sensor resistance in clean air
+
+  
+## 🧪  Calibration Method
+
+1. **Environment**: Sensor powered on for 24 hours in clean air (burn-in time).
+2. **Measured Ro**: Using voltage divider formula:           Rs = (Vc * RL / Vout) - RL
+3. **Known Clean Air Value**:
+- `Rs/Ro ≈ 9.8` in clean air (from MQ2 datasheet)
+- Calculated `Ro` using average `Rs / 9.8`
+  
 
 ## 🧾 License
 
