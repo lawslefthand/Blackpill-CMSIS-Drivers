@@ -1,10 +1,9 @@
 # 🛠️ STM32 Blackpill CMSIS Drivers
 
-A collection of low-level CMSIS drivers written in C for the STM32F401CEU-based **Blackpill** development boards. This repository provides clean, modular, and reusable drivers for common peripherals, offering full control over the hardware without relying on HAL or STM32CubeMX. F411CEU boards can also use this drivers albeit with minor clock config modifications in the source files. New drivers ar eregularly added!
+A collection of CMSIS and HAL drivers written in C for the STM32F401CEU-based **Blackpill** development boards. This repository provides clean, modular, and reusable drivers for common peripherals, offering full control over the hardware. F411CEU boards can also use this drivers albeit with minor clock config modifications in the source files. New drivers are regularly added!
 
 ## 📆 Features
 
-- ✅ Written entirely using [CMSIS](https://arm-software.github.io/CMSIS_5/) (no HAL, no CubeMX)
 - 🧱 Modular and scalable driver architecture
 - 🚀 Optimized for performance and low overhead
 - 💻 Easily portable to other STM32F4 series MCUs
