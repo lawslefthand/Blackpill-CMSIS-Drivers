@@ -1,5 +1,3 @@
-# MQ2-
- MQ2 sensor driver , MCU - STM32F401CCU6 (BLACK PILL)
 
  # MQ2 Gas Sensor Driver for STM32F401CCU6
 
@@ -29,7 +27,7 @@ This project provides a basic driver and interface for the **MQ2 gas sensor**, i
 
 ---
 
-## 🧪 Features
+## Features
 
 - Reads analog gas sensor data via ADC
 - Converts raw values to **PPM (parts per million)** using a simple calibration curve
@@ -38,7 +36,7 @@ This project provides a basic driver and interface for the **MQ2 gas sensor**, i
 
 ---
 
-## 🔌 Wiring (MQ2 → STM32F401)
+##  Wiring (MQ2 → STM32F401)
 
 | MQ2 Pin | Description  | STM32F401 Pin |
 |---------|--------------|----------------|
@@ -50,14 +48,14 @@ This project provides a basic driver and interface for the **MQ2 gas sensor**, i
 
 ---
 
-## 🖥️ Output Example
+## Output Example
 
 The UART output (115200 baud rate) looks like:
 **The sensor value is : 30 PPM**
 
 ---
 
-## 🛠️ How to Build
+## How to Build
 
 1. Open the project in **STM32CubeIDE** or **Keil uVision**.
 2. Ensure correct ADC and UART pins are configured in `.ioc` or `main.c`.
@@ -66,7 +64,7 @@ The UART output (115200 baud rate) looks like:
 
 
 
-## 🔍 MQ2 Sensor Working Principle
+## MQ2 Sensor Working Principle
 
 The MQ2 sensor detects gas concentrations based on a change in resistance of a heated sensitive material(TIN DIOXIDE). The sensor outputs an analog voltage proportional to gas concentration.
 
@@ -74,7 +72,7 @@ The MQ2 sensor detects gas concentrations based on a change in resistance of a h
 - **Ro**: Sensor resistance in clean air
 
   
-## 🧪  Calibration Method
+## Calibration Method
 
 1. **Environment**: Sensor powered on for 24 hours in clean air (burn-in time).
 2. **Measured Ro**: Using voltage divider formula:           Rs = (Vc * RL / Vout) - RL
@@ -83,21 +81,22 @@ The MQ2 sensor detects gas concentrations based on a change in resistance of a h
 - Calculated `Ro` using average `Rs / 9.8`
   
 
-## 🧾 License
+## License
 
 This project is open-sourced under the MIT License. See `LICENSE` file.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Pull requests and forks are welcome. If you find any bugs or want to suggest improvements, feel free to raise an issue.
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
 - STMicroelectronics for libraries
 - MQ2 datasheets and community for calibration curve data
+
 
 
