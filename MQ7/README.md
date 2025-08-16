@@ -1,3 +1,5 @@
+
+![MQ-2-Gas-Sensor-3](https://github.com/user-attachments/assets/c8d0f3a3-140b-4274-85be-14de87a5de6b)
 # MQ7 Carbon Monoxide Sensor Driver for STM32F401CCU6
 
 This project provides a basic driver and interface for the **MQ7 carbon monoxide (CO) gas sensor**, implemented on the **STM32F401CCU6** microcontroller. The MQ7 is widely used for detecting **CO concentrations** in the range of 20–2000 ppm.
