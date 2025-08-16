@@ -1,3 +1,4 @@
+![2651-07-1400x1050h](https://github.com/user-attachments/assets/03583fb8-de64-4a16-80a1-b6508865e565)
 # BMP280 I2C Driver (CMSIS)
 
 This directory contains a CMSIS-based driver for interfacing with the **Bosch BMP280** temperature and pressure sensor using I2C. Designed for STM32F4xx-based boards, this driver avoids using HAL and provides low-level register control with support for temperature, pressure, and altitude calculations.
