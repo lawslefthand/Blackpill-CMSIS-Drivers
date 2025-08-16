@@ -4,10 +4,10 @@ This directory contains a CMSIS-based driver for interfacing with the **Bosch BM
 
 ## Features
 
-- 🔢 Fully CMSIS-based (no HAL/CubeMX)
-- 📉 Pressure, temperature, and altitude readouts
-- ⚖️ Supports user-defined oversampling and filter settings
-- 📶 I2C interface implementation from scratch
+- Fully CMSIS-based (no HAL/CubeMX)
+- Pressure, temperature, and altitude readouts
+- Supports user-defined oversampling and filter settings
+- I2C interface implementation from scratch
 
 ## File Structure
 
