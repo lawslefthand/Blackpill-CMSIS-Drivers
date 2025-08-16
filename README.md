@@ -40,17 +40,7 @@ Additionally, example projects are provided in the `examples/` directory to help
 
 ## Getting Started
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/stm32-blackpill-drivers.git
-   ```
-
-2. Include the desired driver from the `drivers/` folder in your project.
-
-3. Configure the system clock and peripherals in your `system_stm32f4xx.c` or CMSIS startup file.
-
-4. Refer to the provided examples for integration guidance.
+1:Simply copy the .c and .h files for the drivers you want to use in you src and inc folders in the Stm32CUBEIDE project directory.
 
 ---
 
