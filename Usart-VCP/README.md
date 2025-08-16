@@ -4,8 +4,8 @@ This module provides a minimal USART driver built using CMSIS for STM32F4xx-base
 
 ## Features
 
-- ⚙️ Pure CMSIS, no HAL or CubeMX required
-- 🖨️ `printf()` redirection to USART2 for debug logging
+- Pure CMSIS, no HAL or CubeMX required
+- `printf()` redirection to USART2 for debug logging
 - 🔌 Designed for use with Virtual COM Port over ST-Link or external USB UARTs
 
 ## File Structure
