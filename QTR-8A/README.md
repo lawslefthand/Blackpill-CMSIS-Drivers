@@ -9,10 +9,10 @@ The QTR-8A sensor provides 8 analog output channels that correspond to reflectan
 
 ## Features
 
-- ✅ CMSIS-only driver (no HAL or CubeMX)
-- ⚡ High-speed single-conversion ADC reads
-- 🌊 Easy-to-extend design for additional analog channels
-- 🔀 Modular conversion functions per channel
+- CMSIS-only driver (no HAL or CubeMX)
+- High-speed single-conversion ADC reads
+- Easy-to-extend design for additional analog channels
+- Modular conversion functions per channel
 
 ## Pins Used
 
