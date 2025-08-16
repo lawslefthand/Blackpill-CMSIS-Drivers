@@ -17,7 +17,9 @@ While primarily targeted at the STM32F401CEU, these drivers are also compatible 
 
 ---
 ## Board Pinout
-
+F411CCU:
+<img width="1280" height="739" alt="STM32-STM32F4-STM32F411-STM32F411CEU6-pinout-low-resolution png" src="https://github.com/user-attachments/assets/4248c9c3-d492-4764-b207-18cf1837b7a2" />
+F401CEU:
 ![STM32 Blackpill Pinout](https://github.com/user-attachments/assets/61edcc62-1b1b-4fc0-8368-e75bea8b4cd0)
 
 ---
