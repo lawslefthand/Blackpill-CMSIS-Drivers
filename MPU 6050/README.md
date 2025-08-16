@@ -43,11 +43,12 @@ The driver is implemented without using STM32 HAL/LL — it directly configures 
 
    ```c
    int main(void) {
-       mpu_start();   // RCC + GPIO + I2C init
-       mpu_init();    // Wake up sensor & configure
+       mpu_start();   // RCC + GPIO + I2C init + MPU initial Init Settings
+      
        while (1) {
            mpu_accel_read();
            mpu_gyro_read();
+           //or any of the individual x,y,z read functions for the accel/gyro
        }
    }
    ```
