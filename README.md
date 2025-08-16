@@ -1,6 +1,6 @@
 # STM32 Blackpill CMSIS Drivers
 
-A comprehensive collection of **CMSIS** and **HAL-based drivers** written in C for the STM32F401CEU-powered **Blackpill** development boards. This repository focuses on providing **clean, modular, and reusable drivers** for commonly used peripherals, enabling developers to have full control over the hardware.
+A comprehensive collection of **CMSIS** and selective **HAL-based drivers** written in C for the STM32F401CEU-powered **Blackpill** development boards. This repository focuses on providing **clean, modular, and reusable drivers** for commonly used peripherals, enabling developers to have full control over the hardware.
 
 While primarily targeted at the STM32F401CEU, these drivers are also compatible with the STM32F411CEU with minimal modifications (mainly in clock configuration).
 
@@ -15,20 +15,6 @@ While primarily targeted at the STM32F401CEU, these drivers are also compatible 
 * **CMSIS-Level Control** – Direct register-level access with the option to mix with HAL if needed.
 
 ---
-
-## Drivers Included
-
-The repository currently includes (with new drivers being added regularly):
-
-* **GPIO Driver** – Digital input/output, alternate functions, pull-up/pull-down configuration.
-* **RCC Driver** – Clock control and configuration for system and peripherals.
-* **I2C Driver** – Master mode communication support with common sensor modules.
-* **USART Driver** – UART/USART communication with interrupt-based or polling modes.
-* **SysTick Driver** – System tick configuration for timing and delays.
-* **SPI Driver** *(Work in Progress)* – Full-duplex synchronous communication.
-
----
-
 ## Board Pinout
 
 ![STM32 Blackpill Pinout](https://github.com/user-attachments/assets/61edcc62-1b1b-4fc0-8368-e75bea8b4cd0)
