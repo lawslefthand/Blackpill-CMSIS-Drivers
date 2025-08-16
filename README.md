@@ -77,8 +77,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-### 🔗 Related Resources
 
-* [STM32F401 Reference Manual](https://www.st.com/resource/en/reference_manual/dm00096844-stm32f401xcc-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
-* [CMSIS Documentation](https://arm-software.github.io/CMSIS_5/)
-* [Blackpill Board Overview](https://stm32-base.org/boards/STM32F401CCU6-Black-Pill)
