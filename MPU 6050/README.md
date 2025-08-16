@@ -18,15 +18,6 @@ The driver is implemented without using STM32 HAL/LL — it directly configures 
 * Simple `printf` debug output for serial plotters (e.g. Arduino IDE)
 
 ---
-
-## File Overview
-
-* **mpu6050.c** → Driver source (I²C config + MPU6050 register access)
-* **mpu6050.h** → Header file (register definitions, extern variables)
-* **main.c** (example) → Calls `mpu_start()` + periodic sensor reads
-
----
-
 ## Usage
 
 1. Connect MPU6050 to STM32 Blackpill:
