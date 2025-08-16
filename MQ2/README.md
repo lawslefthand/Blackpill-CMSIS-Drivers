@@ -1,4 +1,5 @@
 
+![MQ-2-Gas-Sensor-3](https://github.com/user-attachments/assets/2af7eac2-ac09-4ccc-8d6e-c52547dff870)
  # MQ2 Gas Sensor Driver for STM32F401CCU6
 
 This project provides a basic driver and interface for the **MQ2 gas sensor**, implemented on the **STM32F401CCU6** microcontroller. The sensor detects gases like **LPG, smoke, alcohol, propane, hydrogen, methane, and carbon monoxide**.
@@ -97,6 +98,7 @@ Pull requests and forks are welcome. If you find any bugs or want to suggest imp
 
 - STMicroelectronics for libraries
 - MQ2 datasheets and community for calibration curve data
+
 
 
 
