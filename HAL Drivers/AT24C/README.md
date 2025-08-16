@@ -2,7 +2,7 @@
 
 This project provides a simple STM32 HAL-based driver for interfacing with AT24C series I2C EEPROMs (like AT24C256) using STM32Cube HAL drivers.
 
-## ✅ Features
+## Features
 
 * Byte-wise read and write to any 16-bit memory address
 * Sequential read/write operations
@@ -10,7 +10,7 @@ This project provides a simple STM32 HAL-based driver for interfacing with AT24C
 * Supports standard 7-bit EEPROM addressing (e.g., 0x50 << 1)
 * Compatible with CubeMX generated HAL code
 
-## ⚙️ Configuration
+## Configuration
 
 Define your EEPROM's 7-bit I2C address and the I2C handle:
 
@@ -18,7 +18,7 @@ Define your EEPROM's 7-bit I2C address and the I2C handle:
 #define A24_ADDR 0x57  // (0xA0 >> 1) if A0-A2 are grounded
 #define i2c_number &hi2c1
 ```
-## 🧠 API Functions
+## API Functions
 ### Write Functions
 ```c
 void send_data_a24c(uint16_t addr, uint8_t data, uint16_t daddr);
@@ -51,16 +51,16 @@ printf("%u%u%u\n", read_data_a24c(addr, 0x0100),
 read_data_a24c_sequential(addr, 0x0150, 3);
 ```
 
-## 🛠️ Dependencies
+##  Dependencies
 
 * STM32 HAL
 * STM32CubeMX-generated initialization code for I2C and UART (optional for `printf`)
 
-## 📄 License
+## License
 
 MIT or ST-provided license depending on source context.
 
-## 📬 Author
+## Author
 
 Aryan Basnet
 
