@@ -93,7 +93,7 @@ The driver is implemented without using STM32 HAL/LL — it directly configures 
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **lawslefthand** – *August 16, 2025*
 
