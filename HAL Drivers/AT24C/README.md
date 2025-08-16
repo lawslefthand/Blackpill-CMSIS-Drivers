@@ -33,7 +33,7 @@ void send_data_a24c_sequential(uint16_t addr, uint16_t daddr,
 uint8_t read_data_a24c(uint16_t addr, uint16_t daddr);
 void read_data_a24c_sequential(uint16_t addr, uint16_t daddr, int incr_tim);
 ```
-## 🚀 Usage Example
+##  Usage Example
 ```c
 uint8_t addr = 0x50 << 1;
 uint8_t data_tx[3] = {58, 25, 62};
