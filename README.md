@@ -1,3 +1,4 @@
+![4877_top_ORIG_2021_03](https://github.com/user-attachments/assets/9978fc25-602d-43a1-9f4f-04f3449879b7)
 # STM32 Blackpill CMSIS Drivers
 
 A comprehensive collection of **CMSIS** and selective **HAL-based drivers** written in C for the STM32F401CEU-powered **Blackpill** development boards. This repository focuses on providing **clean, modular, and reusable drivers** for commonly used peripherals, enabling developers to have full control over the hardware.
