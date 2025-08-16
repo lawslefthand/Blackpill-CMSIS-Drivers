@@ -1,3 +1,6 @@
+
+
+![3886-07](https://github.com/user-attachments/assets/c4c7ee42-3861-4f02-9e3d-b9bcecd4d064)
 # MPU6050 Driver (CMSIS / STM32F4 Blackpill)
 
 This project contains a **bare-metal CMSIS-based driver** for the **MPU6050 (3-axis accelerometer + 3-axis gyroscope)**, written for STM32F4 **Blackpill boards** (STM32F401/STM32F411).
@@ -5,6 +8,7 @@ This project contains a **bare-metal CMSIS-based driver** for the **MPU6050 (3-a
 The driver is implemented without using STM32 HAL/LL — it directly configures registers for **RCC**, **GPIO**, and **I²C1** peripherals.
 
 ---
+![Block-Diagram-of-MPU6050](https://github.com/user-attachments/assets/d3361f5f-fd8b-440e-96a6-64bc9344f80b)
 
 ## Features
 
