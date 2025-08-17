@@ -1,3 +1,5 @@
+![water-flow-sensor-0 5-inch-yf-s201-800x800](https://github.com/user-attachments/assets/e103a08e-e811-4614-aeac-b8d3b95ab5f4)
+
 ## Flow Sensor Driver for STM32 Blackpill boards (F401CCU/F401CEU)
 
 This sections contains an STM32-based driver for the YF-S201 flow sensor using the TIM1 peripheral for pulse counting. The driver calculates flow rate, turbine RPM, and total volume.
