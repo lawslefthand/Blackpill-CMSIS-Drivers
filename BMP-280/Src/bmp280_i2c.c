@@ -52,11 +52,11 @@ void bmp_gpio_config(void) {
     GPIOB->PUPDR |= GPIO_PUPDR_PUPDR9_0;
 
     // Set alternate function to AF4 (I2C1)
-    GPIOB->AFR[1] &= ~(0xF << 0); // Clear AF for PB8
-    GPIOB->AFR[1] |= (4 << 0);    // Set AF4 for PB8
+    GPIOB->AFR[1] &= ~(0xF << 0); 
+    GPIOB->AFR[1] |= (4 << 0);    
 
-    GPIOB->AFR[1] &= ~(0xF << 4); // Clear AF for PB9
-    GPIOB->AFR[1] |= (4 << 4);    // Set AF4 for PB9
+    GPIOB->AFR[1] &= ~(0xF << 4); 
+    GPIOB->AFR[1] |= (4 << 4);  
 }
 
 void bmp_i2c_config(void) {
@@ -65,7 +65,7 @@ void bmp_i2c_config(void) {
     while(I2C1->CR1 & I2C_CR1_PE);
 
 
-    I2C1->CR2 = (42 & 0x3F); // Set FREQ value (42MHz)
+    I2C1->CR2 = (42 & 0x3F); 
 
     
     I2C1->CCR = 210;
@@ -303,3 +303,4 @@ void delay_ms(uint32_t ms) {
 	while ((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) == 0);
 	SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
 }
+
